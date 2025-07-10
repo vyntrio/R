@@ -1,0 +1,33 @@
+<!-- confirm.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Failed</title>
+  <style>
+    body {
+      background: #000;
+      color: red;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
+    }
+    .logo { width: 150px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <img class="logo" src="https://i.postimg.cc/d02v3RhX/image-search-1752126892829.jpg" alt="Logo" />
+  <h2>PAYMENT NOT SUCCESSFUL</h2>
+  <p>PLEASE PAY AND SEND A VALID UTR</p>
+  <script>
+    setTimeout(() => {
+      window.location.href = 'payment.html';
+    }, 6000);
+  </script>
+</body>
+</html>

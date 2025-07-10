@@ -1,0 +1,37 @@
+<!-- payment.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <style>
+    body { background: #000; color: white; font-family: sans-serif; padding: 20px; text-align: center; }
+    .logo { width: 150px; margin-bottom: 20px; }
+    .qr { width: 90%; max-width: 300px; border-radius: 10px; margin: 20px 0; }
+    input { padding: 10px; width: 90%; max-width: 300px; border-radius: 5px; border: none; margin-top: 10px; }
+    button { margin-top: 15px; background: #00ff95; color: black; font-weight: bold; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <img class="logo" src="https://i.postimg.cc/d02v3RhX/image-search-1752126892829.jpg" alt="Logo" />
+
+  <h2>Scan & Pay</h2>
+  <img class="qr" src="https://i.postimg.cc/zft7n6HR/IMG-20250710-WA0008.jpg" alt="QR Code" />
+
+  <p>After payment, enter your UTR number:</p>
+  <input type="text" placeholder="Enter UPI UTR" id="utr" />
+  <br><button onclick="goNext()">Submit</button>
+
+  <script>
+    function goNext() {
+      const utr = document.getElementById("utr").value.trim();
+      if (utr.length < 5) {
+        alert('Enter a valid UTR number.');
+      } else {
+        window.location.href = 'confirm.html';
+      }
+    }
+  </script>
+</body>
+</html>
