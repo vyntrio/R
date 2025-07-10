@@ -2,24 +2,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Enter UID</title>
   <style>
-    body { background: #000; color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-    .logo { width: 150px; margin-bottom: 20px; }
-    .box { background: #111; padding: 30px; border-radius: 10px; width: 90%; max-width: 400px; text-align: center; }
-    input { padding: 10px; width: 90%; margin: 10px 0; border-radius: 5px; border: none; }
-    button { background: #00ff95; color: black; font-weight: bold; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #000;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .logo {
+      width: 140px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    .container {
+      background: #111;
+      border-radius: 15px;
+      padding: 25px 20px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 10px #00ffb3;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00ffb3;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      background: #222;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, #00ff95, #00ffaa);
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #00ffaa, #00ff95);
+    }
+
+    .note {
+      font-size: 13px;
+      text-align: center;
+      color: #aaa;
+      margin-top: 15px;
+    }
   </style>
 </head>
 <body>
   <img class="logo" src="https://i.postimg.cc/d02v3RhX/image-search-1752126892829.jpg" alt="Logo" />
 
-  <div class="box">
+  <div class="container">
     <h2>Enter Your Game UID</h2>
-    <input type="number" id="uid" placeholder="Enter 9-11 digit UID" />
-    <br><button onclick="next()">Confirm</button>
+    <input type="number" id="uid" placeholder="9 to 11 digit UID" />
+    <button onclick="next()">Confirm UID</button>
+    <div class="note">Make sure you enter your correct in-game UID.</div>
   </div>
 
   <script>
@@ -29,7 +94,7 @@
         localStorage.setItem("uid", uid);
         window.location.href = "payment.html";
       } else {
-        alert("Enter valid 9–11 digit UID.");
+        alert("Please enter a valid 9 to 11 digit UID.");
       }
     }
   </script>
