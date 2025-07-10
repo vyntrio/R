@@ -2,40 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Payment QR Page</title>
+  <title>Server Notice</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
+      background-color: #000;
       text-align: center;
-      padding: 40px;
+      padding-top: 100px;
+      font-family: Arial, sans-serif;
     }
-    .number {
-      font-size: 48px;
-      margin-bottom: 30px;
+
+    .blink {
+      color: red;
+      font-size: 28px;
       font-weight: bold;
-      color: #00ffcc;
+      animation: blinkText 1s infinite;
     }
-    .qr {
-      width: 300px;
-      height: auto;
-      margin-bottom: 30px;
-      border: 4px solid #00ffcc;
-      border-radius: 10px;
-    }
-    .footer {
-      font-size: 24px;
-      font-weight: bold;
-      color: #ff4444;
+
+    @keyframes blinkText {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
   </style>
 </head>
 <body>
-  <div class="number">7865975223</div>
-
-  <img class="qr" src="https://i.postimg.cc/ydzygZwd/IMG-20250710-WA0010.jpg" alt="QR Code">
-
-  <div class="footer">PAYMENT KARKE WEBSITE LELE ☠️☠️🫵</div>
+  <div class="blink">
+    SERVER IS TOO SLOW<br>
+    IF YOU ORDERED DEMO PACK,<br>
+    NOW ORDER MINIMUM 2 PACK.
+  </div>
 </body>
 </html>
